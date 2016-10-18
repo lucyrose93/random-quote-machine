@@ -1,0 +1,59 @@
+<!-- our goal is to read the returned value after our request has been completed, so we want a ready state value of 4  -->
+
+<!DOCTYPE html>
+
+<!-- with comments -->
+<html>
+
+<head>
+  <title>Display IP Address</title>
+</head>
+
+<body>
+
+  <script>
+  var xhr = new XMLHttpRequest();
+  //  initializes our XMLHttpRequest
+  // The xhr variable will now be the gateway to all the various properties and methods the XMLHttpRequest object provides for allowing you to make web requests
+
+  xhr.open('GET', "http://ipinfo.io/json", true);
+  // open method - allows you to specify the details of the request you would like to make, so let's add it next
+
+  xhr.send();
+  // sends the requests
+
+  // * because it's asycronous, we need a way of being notfied once our request has come back*
+  // = events, aka readystatechange
+
+  xhr.addEventListener("readystatechange", processRequest, false);
+
+  // process the request:
+
+  // add event handler :
+  function processRequest(e) {
+
+    // now the complicated bit, parsing the result of the HTTP request inside the newly adds event handler
+    // readystatechange event is tied to XMLHttpRequest object's readystate property. every time a value in ready state it changed, the readystatechange event is fired
+    // 5 states to go through, so 4/5 times that processRequest gets called, it won't be for the reasons we are interested in
+    // we only want to move forward once a value of 4 is set
+
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      // go forward if readyState is 4 && status code is 200, meaning that request was successful (so we don't get empty completed requests back)
+      var response = JSON.parse(xhr.responseText);
+      // read the body of the response that is returned.
+      // more specifically,  we pass in the result of xhr.responseText into the JSON.parse method. This takes our string of JSON data and turns it into an actual JSON object that is stored by the response variable
+      alert(response.ip);
+      // time to partay
+    }
+
+    }
+
+  </script>
+</body>
+
+</html> -->
+
+
+<!-- This example converts the raw string into a JSON object, we want XML?   -->
+
+<!-- Just be sure to read the server's documentation on what to expect when the HTTP request returns some data. If you are like me and hate reading documentation, just inspect the value of responseText and figure out what the right course of action should be.
