@@ -1,6 +1,5 @@
-<!-- our goal is to read the returned value after our request has been completed, so we want a ready state value of 4  -->
-
 <!DOCTYPE html>
+<!-- our goal is to read the returned value after our request has been completed, so we want a ready state value of 4  -->
 
 <!-- with comments -->
 <html>
@@ -16,7 +15,7 @@
   //  initializes our XMLHttpRequest
   // The xhr variable will now be the gateway to all the various properties and methods the XMLHttpRequest object provides for allowing you to make web requests
 
-  xhr.open('GET', "http://ipinfo.io/json", true);
+  xhr.open('GET', "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=xml&lang=en", true);
   // open method - allows you to specify the details of the request you would like to make, so let's add it next
 
   xhr.send();
@@ -39,15 +38,14 @@
 
     if (xhr.readyState == 4 && xhr.status == 200) {
       // go forward if readyState is 4 && status code is 200, meaning that request was successful (so we don't get empty completed requests back)
-      var response = JSON.parse(xhr.responseText);
+      var response = parser.parseFromString(xhr.responseText);
       // read the body of the response that is returned.
       // more specifically,  we pass in the result of xhr.responseText into the JSON.parse method. This takes our string of JSON data and turns it into an actual JSON object that is stored by the response variable
-      alert(response.ip);
+      alert(response);
       // time to partay
     }
 
     }
-
   </script>
 </body>
 
