@@ -1,1 +1,51 @@
-rqm.html
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- sets page width equal to device width and initial zoom level to 1.
+    Include in all webpages for better cross-device experience. -->
+
+    <link rel="stylesheet" type="text/css" href="rqm.css">
+
+    <title>Random Quote Machine</title>
+  </head>
+
+
+  <body>
+    <div class="row header">
+      <!-- note: empty divs with a class of col-n are there for layout.
+          they center the content divs on the page. This is because all rows
+          must add up to 12 columns. This is the same in frameworks like bootstrap,
+          but they handle it for you so you don't have to have empty divs in your code -->
+      <div class="col-1"></div>
+      <div class="col-10 header-title">HEADER TEXT</div>
+      <div class="col-1"></div>
+    </div>
+
+    <div class="row description">
+      <div class="col-1"></div>
+      <div class="col-10 description-text">text (e.g. description of project/ rqm) here</div>
+      <div class="col-1"></div>
+    </div>
+
+    <div class="row rqm-body">
+      <div class="col-2"></div>
+      <div class="col-8 rqm-box">
+         Vivamus sagittis lacus vel augue laoreet rutrum
+         faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue.
+         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+         ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus
+         auctor fringilla.
+      </div>
+      <div class="col-2"></div>
+    </div>
+
+      <div class="row footer">
+        <div class="footer-text">FOOTER TEXT</div>
+
+      </div>
+
+  </body>
+
+</html>
