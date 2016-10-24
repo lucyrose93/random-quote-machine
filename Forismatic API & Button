@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+  	<p class="amazingquote">
+  	</p>
+  	<button onclick="getQuote()" class="randomquote">
+  		Click me for inspiration!
+  	</button>
+    
+   <p id ='quoteText'></p>
+
+    <script>
+  
+    function retrieveQuote(data){
+      var quoteText = document.getElementById('quoteText');
+      quoteText.innerHTML = data.quoteText;
+    }
+
+
+    function getQuote(){
+      var scriptTag = document.createElement('script'); 
+      scriptTag.src = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=retrieveQuote';
+      var head = document.querySelector('head');
+      head.appendChild(scriptTag);
+      head.removeChild(scriptTag);
+    }
+
+    </script>
+
+    <script src = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=retrieveQuote'/>
+    	
+  </body>
+</html>
