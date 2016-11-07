@@ -1,22 +1,23 @@
 /* this css file contains a responsive grid, upon which the layout is built. */
-/* each box has its own background color to show layout. Feel free to remove them to work on styling.*/
 
-
+/** first, remove default styling: **/
+html, body { margin: 0px; padding: 0px; border: 0px; }
 
 /** 12-COLUMN RESPONSIVE GRID **/
 
 /* clears any content after a row (so that new row = new section/ line)*/
+
 .row::after {
     content: "";
     clear: both;
     display: block;
+  height: auto; 
 }
 
 /* float all colums left*/
 [class*="col-"] {
     float: left;
     padding: 15px;
-    border: 1px solid red;
 }
 
 /* basis: 100/12 =  8.33 */
@@ -35,12 +36,9 @@
 
 
 /** PAGE LAYOUT **/
-
-/*font styling is only to show structure (layout is vertically tiny without any content!).
-  Delete when adding styling */
 * {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 1.5em;
+  font-family: 'Prociono', serif;
 }
 
 * {
@@ -49,39 +47,77 @@
 }
 
 .header {
-  background-color: red;
+  background-color: #037367;
   margin: 0 auto;
   text-align: center;
+  padding-top: 20px;
 }
 
 .header-title{
-  background-color: blue;
+  background-color: #037367;
+  color: white; 
+  font-variant: small-caps;
+  font-size: 1.6em
 }
 
 .description {
-  background-color: green;
+  background-color: #037367;
   text-align: center;
 }
 
 .description-text {
-  background-color: pink;
+  background-color: #037367;
+  color: white;
+}
+.col-10 {
+  padding: 0; 
 }
 
 .rqm-body {
-  background-color: purple;
+  background-color: #037367;
   text-align: center;
-  margin-top: 10px;
+  margin: auto;
 }
 
 .rqm-box {
-  background-color: yellow;
+  background-color: #7BD4CC;
+  color: #00281F;
+  border-radius: 10px;
+  font-size: 1em; 
+  padding: 0 5%;
 }
 
 .footer {
-  background-color: green;
+  background-color: #037367;
   text-align: center;
-  margin-top: 10px;
-}
+  margin: 0 auto;
+  padding: 30px;
+  font-size: 14px;
+  font-style: italic;
+  }
 
 .footer-text {
+  color: #00281F; 
+    font-weight: normal;
+}
+
+button {
+  font-family: Georgia;
+  font-size: 18px;
+  color: white;
+  padding: 14px;
+  background-color: #00281F;
+  border: none;
+  margin: auto;
+  display:block;
+  border-radius: 5px; 
+}
+
+button:hover {
+    background-color: #7BD4CC;
+    color: white;
+}
+
+.button-container {
+    background-color: #037367;
 }
