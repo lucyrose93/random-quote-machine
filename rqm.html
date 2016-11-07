@@ -7,44 +7,55 @@
     Include in all webpages for better cross-device experience. -->
 
     <link rel="stylesheet" type="text/css" href="rqm.css">
+    <!--google fonts below-->
+    <link href="https://fonts.googleapis.com/css?family=Prociono" rel="stylesheet">
 
     <title>Random Quote Machine</title>
   </head>
 
-
   <body>
     <div class="row header">
-      <!-- note: empty divs with a class of col-n are there for layout.
-          they center the content divs on the page. This is because all rows
-          must add up to 12 columns. This is the same in frameworks like bootstrap,
-          but they handle it for you so you don't have to have empty divs in your code -->
+     
       <div class="col-1"></div>
-      <div class="col-10 header-title">HEADER TEXT</div>
+      <div class="col-10 header-title">Random Quote Machine</div>
       <div class="col-1"></div>
     </div>
 
     <div class="row description">
       <div class="col-1"></div>
-      <div class="col-10 description-text">text (e.g. description of project/ rqm) here</div>
+      <div class="col-10 description-text"></div>
       <div class="col-1"></div>
     </div>
+    <div class="row button-container">
+            <div class="col-5"></div>
+      <div class="col-2 button">
+        <button onclick="getQuote()"> 
+          Inspire Me
+      </button>
+    </div>
+      <div class="col-5"></div>
+    </div>
+      
+
 
     <div class="row rqm-body">
       <div class="col-2"></div>
       <div class="col-8 rqm-box">
-         Vivamus sagittis lacus vel augue laoreet rutrum
-         faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue.
-         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-         ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus
-         auctor fringilla.
+         <p onclick="getQuote()" id="quoteText">Words of wisdom are just a click away...</p>
+        <p onclick="getQuote()" id="quoteAuthor"></p>
+          <div class="row rqm-box" id="tweet"></div>
       </div>
       <div class="col-2"></div>
     </div>
 
+
+
       <div class="row footer">
-        <div class="footer-text">FOOTER TEXT</div>
+        <div class="footer-text">Brought to you by Jessica, Lucy & Quay (2016)</div>
 
       </div>
+    
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   </body>
 
