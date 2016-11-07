@@ -38,7 +38,7 @@ html, body { margin: 0px; padding: 0px; border: 0px; }
 /** PAGE LAYOUT **/
 * {
   font-size: 1.5em;
-  font-weight: bold;
+  font-family: 'Prociono', serif;
 }
 
 * {
@@ -56,6 +56,8 @@ html, body { margin: 0px; padding: 0px; border: 0px; }
 .header-title{
   background-color: #037367;
   color: white; 
+  font-variant: small-caps;
+  font-size: 1.6em
 }
 
 .description {
@@ -65,7 +67,10 @@ html, body { margin: 0px; padding: 0px; border: 0px; }
 
 .description-text {
   background-color: #037367;
-  color: white; 
+  color: white;
+}
+.col-10 {
+  padding: 0; 
 }
 
 .rqm-body {
@@ -79,15 +84,40 @@ html, body { margin: 0px; padding: 0px; border: 0px; }
   color: #00281F;
   border-radius: 10px;
   font-size: 1em; 
+  padding: 0 5%;
 }
 
 .footer {
   background-color: #037367;
   text-align: center;
   margin: 0 auto;
-  padding-top: 20px;
-}
+  padding: 30px;
+  font-size: 14px;
+  font-style: italic;
+  }
 
 .footer-text {
-  color: white; 
+  color: #00281F; 
+    font-weight: normal;
+}
+
+button {
+  font-family: Georgia;
+  font-size: 18px;
+  color: white;
+  padding: 14px;
+  background-color: #00281F;
+  border: none;
+  margin: auto;
+  display:block;
+  border-radius: 5px; 
+}
+
+button:hover {
+    background-color: #7BD4CC;
+    color: white;
+}
+
+.button-container {
+    background-color: #037367;
 }
